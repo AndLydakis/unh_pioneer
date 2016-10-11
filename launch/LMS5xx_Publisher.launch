@@ -1,0 +1,11 @@
+<launch>
+	<remap from="lms5xx_scan" to="scan"/>
+	<node pkg="unh_pioneer" 
+	      type="lms5xx_publisher_node" 
+	      name="LMS5xx_Publisher" 
+	      required="true"
+	      output="screen"/>
+	      
+	<remap from="lms5xx_scan" to="scan"/>
+	      
+</launch>

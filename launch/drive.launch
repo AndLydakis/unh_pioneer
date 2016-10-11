@@ -1,0 +1,14 @@
+<launch>
+	<node pkg="rosaria" name="base_drive" type="RosAria"
+	required="true" output="screen"/>
+
+	<remap from="/teleop/cmd_vel" to="/base_drive/cmd_vel"/>	
+		
+	<node pkg="turtlebot_teleop" name="teleop" type="turtlebot_teleop_joy"/>
+	
+	<node pkg="joy" name="joy" type="joy_node"/>
+	<include file="$(find openni2_launch)/launch/openni2.launch"/>
+
+	<include file="$(find unh_pioneer)/launch/LMS5xx_Publisher.launch"/>
+
+</launch>
