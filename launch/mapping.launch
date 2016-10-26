@@ -2,10 +2,6 @@
 
 <include file="$(find unh_pioneer)/launch/drive.launch"/>
 
-<node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="0 0 0.1397 0 0 0 /base_link /base_laser 100" />
-
-<node pkg="tf" type="static_transform_publisher" name="base_link_to_camera" args="0 0 0.3397 0 0 0 /base_link /camera_link 100" />
-
 <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" args="/scan">
 		<param name="delta" type="double" value="0.05" />
 		<param name="temporalUpdate" type="double" value="2.5" />

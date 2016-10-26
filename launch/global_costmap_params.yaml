@@ -3,4 +3,8 @@ global_costmap:
   robot_base_frame: base_link
   update_frequency: 2.0
   publish_frequency: 10.0
+  map_type: costmap
+#  origin_x: -14.8
+#  origin_y: -16.4
 static_map: true
+map_type: costmap
